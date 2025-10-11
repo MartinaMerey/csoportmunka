@@ -1,0 +1,135 @@
+* {
+
+    padding: 0px;
+    margin: 0px;
+    /*alapértelmezett, conten box*/
+    box-sizing: border-box;
+    /*tartalom+padding+margin+border=x szélessége px)*/
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: aliceblue;
+    border-radius: 12px;
+
+
+}
+
+body {
+    max-width: 800px;
+    margin: auto;
+}
+
+.divgrid {
+    background-image: linear-gradient(to right, red , yellow);
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(4, auto);
+    gap: 16px;
+    grid-template-areas: 
+    "h" 
+    "n"
+    "s"
+    "f" ;
+}
+
+header{
+    background-color: rgb(109, 164, 146);
+    text-align: center;
+    font-weight:800;
+    /*grid-column: 1 /3;*/
+    grid-area: h;
+    margin:5px 20px 0px 20px;
+    padding:40px 0px 40px 0px;
+
+}
+
+nav{
+    background-color: rgb(19, 63, 48);
+    text-align:center;
+    /*grid-column: 1 /3;*/
+    text-transform: uppercase;
+    font-size: 12px;
+    grid-area: n;
+    margin:0px 20px 0px 20px;
+    padding:20px 0px 20px 0px;
+
+}
+
+a{
+    padding: 40px;
+}
+
+.lastlink {
+    background-color: rgb(247, 31, 106);
+    /*border: 2px solid #ffeb3b; /* yellow border */
+    padding: 10px;
+    display: inline-block;
+    border-radius: 4px;
+
+}
+
+a:hover {
+  color: hotpink;
+}
+
+section{
+    grid-area: s;
+}
+
+.secgrid {
+    background-color: antiquewhite;
+    padding: 1rem;
+    min-height: 100vh;
+    display: grid;
+    gap: 16px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, auto);
+    gap: 16px;
+}
+
+img {
+    width:100%;
+    height:100%;
+    object-fit: cover;
+    max-height: 250px;
+}
+
+
+
+article {
+    display: grid;
+    gap: 16px;
+    /*grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, auto);*/
+
+}
+
+
+
+.thumb {
+    border: 2px solid rgb(109, 164, 146) ;
+}
+
+footer{
+    grid-area: f;
+    margin:5px 20px 0px 20px;
+    padding:40px 0px 40px 0px;
+  background-color: rgb(109, 164, 146);
+    text-align: center;
+    font-weight:800;
+    }
+
+
+
+/*600 px alatt így jelenik meg a weboldalunk: (ami altta van formázás)*/
+@media screen and (max-width: 600px) {
+    article {
+        grid-template-columns: 1fr;
+    }
+      nav {
+        display: block;
+    }
+  .divgrid{
+    grid-template-columns: repeat(2, 1fr);
+    }
+
+}

@@ -5,12 +5,15 @@
     /*alapértelmezett, conten box*/
     box-sizing: border-box;
     /*tartalom+padding+margin+border=x szélessége px)*/
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color: aliceblue;
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+    color: black;
     border-radius: 12px;
-
-
+    background: linear-gradient(90deg, hsla(192, 96%, 50%, 1) 0%, hsla(65, 92%, 54%, 1) 100%);
 }
+
 
 body {
     max-width: 800px;
@@ -18,7 +21,7 @@ body {
 }
 
 .divgrid {
-    background-image: linear-gradient(to right, red , yellow);
+    background-image: linear-gradient(to right, rgb(231, 51, 93) , yellow);
     padding: 1rem;
     display: grid;
     grid-template-columns: repeat(1, 1fr);

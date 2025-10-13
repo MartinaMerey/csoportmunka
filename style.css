@@ -1,158 +1,142 @@
 * {
-    padding: 0px;
-    margin: 0px;
-    /*alapértelmezett, conten box*/
+    padding: 0;
+    margin: 0;
     box-sizing: border-box;
-    /*tartalom+padding+margin+border=x szélessége px)*/
     font-family: "Outfit", sans-serif;
-    font-optical-sizing: auto;
     font-weight: 100;
     font-style: normal;
-    border-radius: 0px 0px 5px 5px;
-    
 }
 
-
 body {
-   /*background: linear-gradient(90deg, hsla(192, 96%, 50%, 1) 0%, hsla(65, 92%, 54%, 1) 100%);*/
-    background: linear-gradient(90deg, hsla(120, 93%, 84%, 1) 0%, hsla(185, 90%, 51%, 1) 100%); 
-    
+    background: linear-gradient(30deg, hsla(120, 93%, 84%, 1) 0%, hsla(185, 90%, 51%, 1) 100%);
 }
 
 .divgrid {
     max-width: 800px;
     margin: auto;
-    background: #EFF6E0;
-    /*padding: 1rem;*/
+    background: rgb(239, 239, 239);
+    box-shadow: 0px 0px 20px rgba(13, 19, 33, 0.3);
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(4, auto);
-    /*gap: 16px;*/
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto auto;
     grid-template-areas: 
-    "h n n " 
-    "s s s"
-    "s s s"
-    "f f f" ;
+        "fej" 
+        "s"
+        "s"
+        "s"
+        "s"
+        "f";
 }
 
-header{
+.fejlec {
+    grid-area: fej;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas: "h n";
+}
+
+header {
     background: #0D1321;
-    color: #EFF6E0 !important;
     text-align: center;
-    font-weight:700 !important;
-    font-size: 36px !important;
-    /*grid-column: 1 /3;*/
     grid-area: h;
-    /*margin:5px 20px 0px 20px;*/
-    padding:20px;
+    height: 100px;
+    line-height: 100px;
 }
 
-#aheader{
-    color: #EFF6E0 !important;
-    text-align: center;
-    font-weight:700 !important;
-    font-size: 36px !important;
+#aheader {
+    color: white;
+    font-weight: 500;
+    font-size: 40px;
+    text-decoration: none;
 }
 
-nav{
+nav {
     background-color: #748CAB;
     color: #0D1321;
-    text-align:right;
-    /*grid-column: 1 /3;*/
+    text-align: right;
     text-transform: uppercase;
-    font-size: 12px;
+    font-size: 14px;
     grid-area: n;
-    /*margin:0px 20px 0px 20px;*/
-    padding:20px;
-
+    height: 100px;
+    line-height: 100px;
+    padding-right: 40px;
 }
 
-a{
-    /*padding: 40px;*/
-}
-
-.lastlink {
-    background-color: rgb(247, 31, 106);
-    /*border: 2px solid #ffeb3b; /* yellow border */
-    padding: 10px;
-    display: inline-block;
-    border-radius: 4px;
-
+.anav {
+    padding-inline: 5px;
+    color: #0D1321;
+    font-weight: 500;
+    font-size: 14px;
+    text-decoration: none;
 }
 
 a:hover {
-  color: hotpink;
+    color: rgb(173, 255, 105);
 }
 
-section{
+section.secgrid {
     grid-area: s;
     background: white;
-    color: black !important;
+    color: black;
     text-align: center;
-    font-weight:100 !important;
-    font-size: 16px !important;
-    /*grid-column: 1 /3;*/
-    margin:20px;
-    padding:20px;
-}
-
-.secgrid {
-    background-color: antiquewhite;
-    padding: 1rem;
-    min-height: 100vh;
+    font-weight: 100;
+    font-size: 14px;
+    border-radius: 5px;
+    margin: 20px;
+    padding: 20px;
     display: grid;
-    gap: 16px;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, auto);
-    gap: 16px;
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas: 
+        "l l l" 
+        "l l kk"
+        "kk l l"
+        "l l kk";
 }
 
-img {
-    width:100%;
-    height:100%;
+.leiras {
+    background-color: #f5f5f5;
+    padding: 10px;
+    grid-area: l;
+}
+
+.kepkocka {
+    background-color: #e0e0e0;
+    padding: 10px;
+    grid-area: l;
+}
+
+.kepkocka img {
+    width: 100%;
+    height: auto;
     object-fit: cover;
-    max-height: 250px;
+    background-size: cover;
+    background-position: center;
 }
 
-
-
-article {
-    display: grid;
-    gap: 16px;
-    /*grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, auto);*/
-
-}
-
-
-
-.thumb {
-    border: 2px solid rgb(109, 164, 146) ;
-}
-
-footer{
+footer {
     grid-area: f;
-    /*margin:5px 20px 0px 20px;*/
-    padding:20px;
+    padding: 20px;
     background-color: #3E5C76;
     text-align: center;
-    color:white;
-    font: weight 400px;
+    color: white;
+    font-weight: 400;
     font-size: 16px;
-    }
+}
 
-
-
-/*600 px alatt így jelenik meg a weboldalunk: (ami altta van formázás)*/
 @media screen and (max-width: 600px) {
-    article {
+    .secgrid {
         grid-template-columns: 1fr;
     }
-      nav {
+
+    nav {
         display: block;
-    }
-  .divgrid{
-    grid-template-columns: repeat(2, 1fr);
+        text-align: center;
+        line-height: normal;
+        padding: 10px;
     }
 
+    .divgrid {
+        grid-template-columns: 1fr;
+    }
 }

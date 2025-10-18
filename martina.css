@@ -9,7 +9,6 @@
 }
 
 body   {
-    /*background: linear-gradient(30deg, hsla(120, 93%, 84%, 1) 0%, hsla(185, 90%, 51%, 1) 100%);*/
     background: linear-gradient(1deg, hsla(233, 100%, 90%, 1) 0%, hsla(0, 0%, 89%, 1) 100%);
     background-size: cover;
     background-position: fixed;
@@ -131,17 +130,16 @@ img {
 }
 
 .secgrid {
-    display: grid;
-    grid-template-areas:
+  display: grid;
+  grid-template-areas:
     "s1 s1 s1"
     "s2 s2 i1"
     "i2 s3 s3"
     "s4 s4 i3";
-    gap: 1rem;
-    max-width: 1080px;
-    margin: auto;
-    font-weight:100;
-    font-size:14px;
+  gap: 1.5rem;
+  max-width: 1080px;
+  margin: auto;
+  padding: 50px;
 }
 
 section.secgrid {
@@ -149,9 +147,6 @@ section.secgrid {
     background: white;
     color: black;
     text-align:justify
-    
-    
-    
 }
 
 div {

@@ -82,7 +82,6 @@ a:hover {
 .sec-2,
 .sec-3,
 .sec-4 {
-  border: 1px solid #18184b;
   padding: 1rem;
 }
 
@@ -99,7 +98,6 @@ img {
   width: 100%;
   min-height: 300px;
   object-fit: cover;
-  border: 1px solid #18184b;
   padding: 1rem;
 }
 
@@ -133,33 +131,33 @@ img {
 }
 
 .secgrid {
-  display: grid;
-  grid-template-areas:
+    display: grid;
+    grid-template-areas:
     "s1 s1 s1"
     "s2 s2 i1"
     "i2 s3 s3"
     "s4 s4 i3";
-  gap: 1rem;
-  max-width: 1080px;
-  margin: auto;
+    gap: 1rem;
+    max-width: 1080px;
+    margin: auto;
+    font-weight:100;
+    font-size:14px;
 }
 
 section.secgrid {
     grid-area: s;
     background: white;
     color: black;
-    text-align: center;
-    font-weight: 100;
-    font-size: 14px;
-    border-radius: 5px;
-    padding: 20px;
+    text-align:justify
+    
+    
+    
 }
 
 div {
   min-height: 100px;
 }
 
-/*/
 
 footer {
     grid-area: f;

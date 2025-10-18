@@ -3,12 +3,16 @@
     margin: 0;
     box-sizing: border-box;
     font-family: "Outfit", sans-serif;
-    font-weight: 100;
+    font-weight: 200;
     font-style: normal;
+    box-sizing: border-box;
 }
 
-body {
-    background: linear-gradient(30deg, hsla(120, 93%, 84%, 1) 0%, hsla(185, 90%, 51%, 1) 100%);
+body   {
+    /*background: linear-gradient(30deg, hsla(120, 93%, 84%, 1) 0%, hsla(185, 90%, 51%, 1) 100%);*/
+    background: linear-gradient(1deg, hsla(233, 100%, 90%, 1) 0%, hsla(0, 0%, 89%, 1) 100%);
+    background-size: cover;
+    background-position: fixed;
 }
 
 .divgrid {
@@ -43,7 +47,7 @@ header {
     line-height: 100px;
 }
 
-#aheader {
+.aheader {
     color: white;
     font-weight: 500;
     font-size: 40px;
@@ -74,6 +78,72 @@ a:hover {
     color: rgb(173, 255, 105);
 }
 
+.sec-1,
+.sec-2,
+.sec-3,
+.sec-4 {
+  border: 1px solid #18184b;
+  padding: 1rem;
+}
+
+
+.img-1,
+.img-2,
+.img-3 {
+    background-color: #e0e0e0;
+    padding: 10px;
+    grid-area: l;
+}
+
+img {
+  width: 100%;
+  min-height: 300px;
+  object-fit: cover;
+  border: 1px solid #18184b;
+  padding: 1rem;
+}
+
+
+.sec-1 {
+  grid-area: s1;
+}
+
+.sec-2 {
+  grid-area: s2;
+}
+
+.sec-3 {
+  grid-area: s3;
+}
+
+.sec-4 {
+  grid-area: s4;
+}
+
+.img-1 {
+  grid-area: i1;
+}
+
+.img-2 {
+  grid-area: i2;
+}
+
+.img-3 {
+  grid-area: i3;
+}
+
+.secgrid {
+  display: grid;
+  grid-template-areas:
+    "s1 s1 s1"
+    "s2 s2 i1"
+    "i2 s3 s3"
+    "s4 s4 i3";
+  gap: 1rem;
+  max-width: 1080px;
+  margin: auto;
+}
+
 section.secgrid {
     grid-area: s;
     background: white;
@@ -82,37 +152,14 @@ section.secgrid {
     font-weight: 100;
     font-size: 14px;
     border-radius: 5px;
-    margin: 20px;
     padding: 20px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(4, auto);
-    grid-template-areas: 
-        "l l l" 
-        "l l kk"
-        "kk l l"
-        "l l kk";
 }
 
-.leiras {
-    background-color: #f5f5f5;
-    padding: 10px;
-    grid-area: l;
+div {
+  min-height: 100px;
 }
 
-.kepkocka {
-    background-color: #e0e0e0;
-    padding: 10px;
-    grid-area: l;
-}
-
-.kepkocka img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    background-size: cover;
-    background-position: center;
-}
+/*/
 
 footer {
     grid-area: f;
